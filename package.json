@@ -1,13 +1,14 @@
 {
-  "name": "puppeteer-recaptcha-solver",
+  "name": "playwright-recaptcha-solver",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.ts",
   "license": "MIT",
-  "repository": "github:danielgatis/puppeteer-recaptcha-solver",
+  "repository": "github:xrip/playwright-recaptcha-solver",
   "dependencies": {
     "axios": "^0.24.0",
-    "puppeteer": "^11.0.0",
-    "puppeteer-extra": "^3.2.3",
-    "puppeteer-extra-plugin-stealth": "^2.9.0"
+    "playwright-core": "^1.19.1"
+  },
+  "peerDependencies": {
+    "typescript": "^4.5.5"
   }
 }
