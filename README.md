@@ -25,7 +25,6 @@ yarn add https://github.com/xrip/puppeteer-recaptcha-solver.git
                 '--disable-site-isolation-trials',
                 '--disable-features=site-per-process,SitePerProcess',
                 '--disable-blink-features=AutomationControlled',
-                '--enable-features=UserAgentClientHint',
             ],
 
         });
