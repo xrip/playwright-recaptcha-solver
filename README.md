@@ -46,7 +46,3 @@ yarn add https://github.com/xrip/puppeteer-recaptcha-solver.git
 
 Sometimes you are blocked because of the reputation of the your IP. 
 To avoid this, you can try to buy some residential proxies or run a simple version of the demo without a proxy.
-
-```
-$ node examples/demo-wo-proxy.js
-```
