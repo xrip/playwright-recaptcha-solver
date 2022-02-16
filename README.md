@@ -1,6 +1,6 @@
 # Google ReCaptcha V2 Solver for [Playwright](https://playwright.dev/)
 
-![demo](demo.gif)
+![demo](demo1.gif)
 
 ## How to use
 
