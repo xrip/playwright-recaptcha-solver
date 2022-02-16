@@ -1,7 +1,7 @@
 {
   "name": "playwright-recaptcha-solver",
   "version": "1.0.0",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
   "license": "MIT",
   "repository": "github:xrip/playwright-recaptcha-solver",
   "dependencies": {
@@ -10,5 +10,10 @@
   },
   "peerDependencies": {
     "typescript": "^4.5.5"
+  },
+  "scripts": {
+    "dev": "tsc --watch",
+    "postinstall": "tsc",
+    "build": "tsc"
   }
 }
