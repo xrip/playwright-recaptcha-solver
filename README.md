@@ -2,25 +2,51 @@
 
 ![demo](demo1.gif)
 
-## How to use
+### If you like this project feel free to donate!
 
-Clone this project and run [examples/demo.js](examples/demo.js):
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/paypalme/xrip/)
+
+## Installation
 
 ```sh
 yarn add https://github.com/xrip/puppeteer-recaptcha-solver.git
 ```
 
+## Example
+```js
+    import { chromium } from 'playwright';
+    import { solveCaptcha } from 'playwright-recaptcha-solver';
+
+    (async () => {
+
+        const browser = await chromium.launch({
+            headless: false,
+            args: [
+                '--disable-site-isolation-trials',
+                '--disable-features=site-per-process,SitePerProcess',
+                '--disable-blink-features=AutomationControlled',
+                '--enable-features=UserAgentClientHint',
+            ],
+
+        });
+
+        const ctx = await browser.newContext();
+        const page = await ctx.newPage();
+
+        await page.goto('https://www.google.com/recaptcha/api2/demo');
+
+        await solveCaptcha(page);
+
+        console.log('done');
+    })();
+```
 ## Known issues
 
 ![](https://user-images.githubusercontent.com/3437378/82528851-b14e5a80-9b07-11ea-9f30-6f4fbef0ff1f.png)
 
-Sometimes you are blocked because of the reputation of the tor's IPs. To avoid this, you can try to buy some residential proxies or run a simple version of the demo without a proxy.
+Sometimes you are blocked because of the reputation of the your IP. 
+To avoid this, you can try to buy some residential proxies or run a simple version of the demo without a proxy.
 
 ```
 $ node examples/demo-wo-proxy.js
 ```
-
-## Buy me a coffee
-Liked some of my work? Buy me a coffee (or more likely a beer)
-
-<a href="https://www.buymeacoffee.com/danielgatis" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;"></a>
