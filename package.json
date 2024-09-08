@@ -15,5 +15,8 @@
     "dev": "tsc --watch",
     "postinstall": "tsc",
     "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "^22.5.4"
   }
 }
